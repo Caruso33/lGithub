@@ -1,0 +1,21 @@
+git log - see all commits
+git log --stat - see statistics
+git diff id1 id2 - see diffs of versions
+A good rule of thumb is to make one commit per logical change
+git clone url - copy repository
+git config --global color.ui auto - colored diff
+git checkout id - getting back to recent version
+
+
+copy all files in ~ directoy
+the bash_profile_course content copy to .bash_profile for tab completion and colors
+
+git config --global core.editor
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+
+git init - initialize .git directory
+git status - see which files have changed since last commit
+
+<working directory> <staging area> <repo - (where commits of added files are stored)>
+git add - select files for staging area
