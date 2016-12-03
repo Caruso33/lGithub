@@ -19,3 +19,5 @@ git status - see which files have changed since last commit
 
 <working directory> <staging area> <repo - (where commits of added files are stored)>
 git add - select files for staging area
+git commit - open editor for message: formulate as like command, commits staged files to repo
+or git commit -m "xxx"
