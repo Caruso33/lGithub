@@ -1,18 +1,35 @@
-git log - see all commits
-git log --stat - see statistics
-git diff id1 id2 - see diffs of versions
-A good rule of thumb is to make one commit per logical change
-git clone url - copy repository
+#Setup things
+git config --global core.editor "atom --wait"
+git config --global push.default upstream
+git config --global merge.conflictstyle diff3
+git config --global credential.helper osxkeychain
 git config --global color.ui auto - colored diff
-git checkout id - getting back to recent version
-
 
 copy all files in ~ directoy
 the bash_profile_course content copy to .bash_profile for tab completion and colors
 
-git config --global core.editor
-git config --global push.default upstream
-git config --global merge.conflictstyle diff3
+
+##
+#here start commands
+##
+git log - see all commits
+git log --stat - see statistics
+git log --graph --oneline master coins.
+git log -n 1 - show only one
+
+git diff id1 id2 - see diffs of versions
+git diff - (without params) see difference of wd and staging area
+git diff --staged - see difference of staging area and repo (latest commit)
+git reset --hard - delete all changes in staging area!
+
+A good rule of thumb is to make one commit per logical change
+make branches for every new feature / bug fix
+forking - copy of other github repo directly on github with ref zu origin
+
+git clone url - copy repository
+
+git checkout id - getting back to recent version
+git checkout master - getting back to latest
 
 git init - initialize .git directory
 git status - see which files have changed since last commit
@@ -21,3 +38,23 @@ git status - see which files have changed since last commit
 git add - select files for staging area
 git commit - open editor for message: formulate as like command, commits staged files to repo
 or git commit -m "xxx"
+
+git branch - see all current branchens and where your checkout is!
+git branch name - create new branch with name
+git branch -d easy-mode - delete label of branch
+git checkout name - switch to branch
+> shortcut git checkout -b name
+
+git merge master easy-mode - merge two branches > ALWAYS CHECKOUT FIRST ON PREF BRANCH
+
+git show - see changes against the parent of commit
+
+git remote - see all remote repos on github
+git remote add origin https://github.com/Caruso33/lGithub.git - url from github
+  origin is the name of the remote, you automatically have a origin/master branch then also locally
+git push -u origin master
+
+git pull origin master - pull is same as fetch + merge
+
+git fetch origin - only update the local copy of origin/branch (not updating branch master as it would be the case when using git pull)
+  then git merge master origin/master if everythings fine
